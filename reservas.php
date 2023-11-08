@@ -50,12 +50,8 @@
                             <div class="w-full mt-4">
                                 <form class="form-horizontal w-3/4 mx-auto" method="POST" action="./php/reservas.php">
                                     <div class="flex flex-col mt-4">
-                                        <label class="text-gray-500">Email</label>
-                                        <input id="email" type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="email" required>
-                                    </div>
-                                    <div class="flex flex-col mt-4">
-                                        <label class="text-gray-500">Nome</label>
-                                        <input id="nome" type="text" class="flex-grow h-8 px-2 rounded border border-grey-400" name="nome" required>
+                                        <label class="text-gray-500">CPF</label>
+                                        <input id="cpf" type="text" class="flex-grow h-8 px-2 rounded border border-grey-400" name="cpf" required>
                                     </div>
                                     <div class="flex flex-col mt-4">
                                         <label class="text-gray-500">Data De Entrada</label>
