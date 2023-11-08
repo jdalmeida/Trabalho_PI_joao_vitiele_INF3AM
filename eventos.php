@@ -17,17 +17,16 @@
             </div>
             <div class="items-center justify-between hidden gap-12 text-black md:flex">
                 <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
-                    href="./reservas.html">Reservas</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.html">Fotos</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./index.html">Home</a>
+                    href="./reservas.php">Reservas</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.php">Fotos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./index.php">Home</a>
                 <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
-                    href="./contatos.html">Contatos</a>
+                    href="./contatos.php">Contatos</a>
             </div>
             <div class="items-center hidden gap-8 md:flex">
-                <button
-                    class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300">
+                <a class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300" href="cadastro.php">
                     Cadastre-se
-                </button>
+                </a>
             </div>
             <button onclick="(() => { this.closest('.group').classList.toggle('open')})()" class="flex md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -39,14 +38,15 @@
             <div
                 class="absolute flex md:hidden transition-all duration-300 ease-in-out flex-col items-start shadow-main justify-center w-full gap-3 overflow-hidden bg-white max-h-0 group-[.open]:py-4 px-4 rounded-2xl group-[.open]:max-h-64 top-full">
                 <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
-                    href="./reservas.html">Reservas</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.html">Fotos</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./index.html">Home</a>
+                    href="./reservas.php">Reservas</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.php">Fotos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./index.php">Home</a>
                 <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
-                    href="./contatos.html">Contatos</a>
+                    href="./contatos.php">Contatos</a>
 
-                <button
-                    class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300">Cadastre-se</button>
+                    <a class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300" href="cadastro.php">
+                        Cadastre-se
+                    </a>
             </div>
         </div>
     </header>

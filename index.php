@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Hotel - Mansão</title>
 </head>
+
+<?php
+session_start();
+
+// Verificar se a sessão está ativa
+if (isset($_SESSION['user_id'])) {
+    $sessaoAtiva = true;
+} else {
+    $sessaoAtiva = false;
+}
+?>
+
 <body class="bg-black">
     <nav>
         <div class="relative flex flex-wrap items-center justify-between w-full bg-white group py-7 shrink-0 px-4 shadow-md">
             <div class="flex items-center gap-3">
-                <img class="h-8" src="./public/img/icon.png"><h1 class="font-bold">Mansão</h1>
+                <img class="h-8" src="./public/img/icon.png">
+                <h1 class="font-bold">Mansão</h1>
             </div>
             <div class="items-center justify-between hidden gap-12 text-black md:flex">
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./reservas.html">Reservas</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.html">Fotos</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./eventos.html">Eventos</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./contatos.html">Contatos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./reservas.php">Reservas</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.php">Fotos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./eventos.php">Eventos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./contatos.php">Contatos</a>
             </div>
-            <div class="items-center hidden gap-8 md:flex">
-                <button class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300">
+            <div class="items-center hidden gap-8 md:flex botao-cadastro">
+                <a class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300" href="cadastro.php">
                     Cadastre-se
-                </button>
+                </a>
             </div>
             <button onclick="(() => { this.closest('.group').classList.toggle('open')})()" class="flex md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -29,12 +43,14 @@
                 </svg>
             </button>
             <div class="absolute flex md:hidden transition-all duration-300 ease-in-out flex-col items-start shadow-main justify-center w-full gap-3 overflow-hidden bg-white max-h-0 group-[.open]:py-4 px-4 rounded-2xl group-[.open]:max-h-64 top-full">
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./reservas.html">Reservas</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.html">Fotos</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./eventos.html">Eventos</a>
-                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./contatos.html">Contatos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./reservas.php">Reservas</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./fotos.php">Fotos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./eventos.php">Eventos</a>
+                <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="./contatos.php">Contatos</a>
 
-                <button class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300">Cadastre-se</button>
+                <a class="flex items-center px-4 py-2 text-sm font-bold rounded-xl bg-purple-blue-100 text-purple-blue-600 hover:bg-purple-blue-600 hover:text-white transition duration-300 botao-cadastro" href="cadastro.php">
+                    Cadastre-se
+                </a>
             </div>
         </div>
     </nav>
@@ -42,11 +58,14 @@
         <div class="flex bg-white" style="height:600px;">
             <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
                 <div>
-                    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Encontre O Maior <span class="text-indigo-600">Conforto</span></h2>
+                    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Encontre O Maior <span class="text-indigo-600">Conforto
+                        <?php 
+                    echo $_SESSION['user_id'];
+                    ?></span></h2>
                     <p class="mt-2 text-sm text-gray-500 md:text-base">Bem-vindo à Mansão, um refúgio de luxo e elegância. Com quartos luxuosos, um restaurante premiado e um spa de classe mundial, oferecemos uma experiência única para relaxar e desfrutar. Seja para uma escapadela romântica, viagem de negócios ou evento especial, a Mansão redefine o luxo. Bem-vindo ao nosso mundo de sofisticação.</p>
                     <div class="flex justify-center lg:justify-start mt-6">
-                        <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="./reservas.html">Faça Sua Reserva</a>
-                        <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="./contatos.html">Entre Em Contato</a>
+                        <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="./reservas.php">Faça Sua Reserva</a>
+                        <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="./contatos.php">Entre Em Contato</a>
                     </div>
                 </div>
             </div>
@@ -58,4 +77,17 @@
         </div>
     </main>
 </body>
+<script>
+    var sessaoAtiva = <?php echo json_encode($sessaoAtiva); ?>;
+    document.addEventListener("DOMContentLoaded", function() {
+        if (sessaoAtiva) {
+            // Se a sessão estiver ativa, oculte os botões de cadastro
+            var botoesCadastro = document.querySelectorAll(".botao-cadastro");
+            for (var i = 0; i < botoesCadastro.length; i++) {
+                botoesCadastro[i].style.display = "none";
+            }
+        }
+    });
+</script>
+
 </html>

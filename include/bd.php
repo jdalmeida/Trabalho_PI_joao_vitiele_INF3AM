@@ -5,5 +5,4 @@
     $NOME_BANCO = 'hotel';
 
     $bd = mysqli_connect($CONEXAO_DB, $USUARIO, $SENHA, $NOME_BANCO);
-
 ?>
