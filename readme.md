@@ -8,4 +8,4 @@
 ## Back-end
 - [ ] Sessão de usuário
 - [ ] Limpar código
-- [ ] Corrigir falhas de segurança
+- [ ] Corrigir falhas de segurança (Ajeitar gambiarra)
