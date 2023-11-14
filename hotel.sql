@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 08/11/2023 às 15:36
+-- Tempo de geração: 14/11/2023 às 14:44
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -30,16 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `hospede` (
   `cod_hospede` int(11) NOT NULL,
   `nome` varchar(30) NOT NULL,
-  `sobrenome` varchar(30) DEFAULT NULL,
   `CPF` varchar(11) NOT NULL,
   `dt_nasc` date NOT NULL,
-  `endereco` varchar(50) NOT NULL,
-  `cidade` varchar(30) NOT NULL,
-  `estado` varchar(2) NOT NULL,
-  `CEP` varchar(8) NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `senha` varchar(8) NOT NULL
+  `email` varchar(64) NOT NULL,
+  `senha` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `hospede`
+--
+
+INSERT INTO `hospede` (`cod_hospede`, `nome`, `CPF`, `dt_nasc`, `email`, `senha`) VALUES
+(11, 'João Gabriel de Almeida', '12345678910', '2005-08-22', 'joaogabrielde.almeida@hotmail.com', 'nknknk');
 
 -- --------------------------------------------------------
 
@@ -53,6 +55,13 @@ CREATE TABLE `reserva` (
   `dt_entrada` date NOT NULL,
   `dt_saida` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `reserva`
+--
+
+INSERT INTO `reserva` (`cod_hospede_fk`, `cod_reserva_pk`, `dt_entrada`, `dt_saida`) VALUES
+(11, 1, '2023-11-17', '2023-11-19');
 
 --
 -- Índices para tabelas despejadas
@@ -80,13 +89,13 @@ ALTER TABLE `reserva`
 -- AUTO_INCREMENT de tabela `hospede`
 --
 ALTER TABLE `hospede`
-  MODIFY `cod_hospede` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_hospede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `cod_reserva_pk` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_reserva_pk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para tabelas despejadas
