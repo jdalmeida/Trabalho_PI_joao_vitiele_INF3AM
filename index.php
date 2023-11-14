@@ -58,10 +58,7 @@ if (isset($_SESSION['user_id'])) {
         <div class="flex bg-white" style="height:600px;">
             <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
                 <div>
-                    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Encontre O Maior <span class="text-indigo-600">Conforto
-                        <?php 
-                    echo $_SESSION['user_id'];
-                    ?></span></h2>
+                    <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Encontre O Maior <span class="text-indigo-600">Conforto</span></h2>
                     <p class="mt-2 text-sm text-gray-500 md:text-base">Bem-vindo à Mansão, um refúgio de luxo e elegância. Com quartos luxuosos, um restaurante premiado e um spa de classe mundial, oferecemos uma experiência única para relaxar e desfrutar. Seja para uma escapadela romântica, viagem de negócios ou evento especial, a Mansão redefine o luxo. Bem-vindo ao nosso mundo de sofisticação.</p>
                     <div class="flex justify-center lg:justify-start mt-6">
                         <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="./reservas.php">Faça Sua Reserva</a>

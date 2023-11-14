@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Hotel - Mansão</title>
 </head>
-<body class="bg-black">
+<body class="bg-white">
     <header>
         <div class="relative flex flex-wrap items-center justify-between w-full bg-white group py-7 shrink-0 px-4 shadow-md">
             <div class="flex items-center gap-3">
@@ -41,7 +41,46 @@
         </div>
     </header>
     <main>
+        <!-- component -->
+        <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Blog Entry 1 -->
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer">
+                    <img src="public/img/mansaoVistaPorCima.jpg"
+                        alt=""
+                        class="w-auto h-full object-cover rounded-lg">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">A maior Mansão </h1>
+                        <p class="mt-2"> Passe as suas férias em uma das maiores mansões do Caribe!</p>
+                    </div>
+                </div>
 
+                <!-- Blog Entry 2 -->
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer">
+                    <img src="public/img/sacadaCaribe.jpg"
+                        alt="Img by Meriç Dağlı https://unsplash.com/@meric"
+                        class="w-auto h-full object-cover rounded-lg">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Vista Paradisíaca</h1>
+                        <p class="mt-2">Vista paradisíaca em frente ao mar, para relexar e curtir!</p>
+                    </div>
+                </div>
+
+                <!-- Blog Entry 3 -->
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer cursor-pointer">
+                    <img src="public/img/salaCaribe.jpg"
+                        alt="Img by Meriç Dağlı https://unsplash.com/@meric"
+                        class="w-auto h-full object-cover rounded-lg">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Luxo e Conforto</h1>
+                        <p class="mt-2">Ambiente confortável e aconchegante para passar com a sua família, e seu companheiro(a) ou amigos!!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
 </body>

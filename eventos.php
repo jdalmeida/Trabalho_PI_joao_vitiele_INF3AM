@@ -10,6 +10,7 @@
 
 <body class="bg-white">
     <header>
+
         <div class="relative flex flex-wrap items-center justify-between w-full bg-white group py-7 shrink-0 px-4 shadow-md">
             <div class="flex items-center gap-3">
                 <img class="h-8" src="./public/img/icon.png">
@@ -55,46 +56,44 @@
         <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Blog Entry 1 -->
-                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Img by Meriç Dağlı https://unsplash.com/@meric"
-                        class="w-full h-auto object-cover rounded-lg">
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer">
+                    <img src="public/img/casamento.jpg"
+                        alt=""
+                        class="w-auto h-full object-cover rounded-lg">
                     <div
                         class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                        <h1 class="text-2xl font-semibold">Nature Image</h1>
-                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own
-                            image.</p>
+                        <h1 class="text-2xl font-semibold">Festas privadas e open bar</h1>
+                        <p class="mt-2"> Passe as suas férias curtindo e se divertindo!!!</p>
                     </div>
                 </div>
 
                 <!-- Blog Entry 2 -->
-                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer">
+                    <img src="public/img/restaurante.jpeg"
                         alt="Img by Meriç Dağlı https://unsplash.com/@meric"
-                        class="w-full h-auto object-cover rounded-lg">
+                        class="w-auto h-full object-cover rounded-lg">
                     <div
                         class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                        <h1 class="text-2xl font-semibold">Nature Image</h1>
-                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own
-                            image.</p>
+                        <h1 class="text-2xl font-semibold">Restaurantes e bares</h1>
+                        <p class="mt-2">Comidas e bebidas típicas e saborosas </p>
                     </div>
                 </div>
 
                 <!-- Blog Entry 3 -->
-                <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer cursor-pointer">
+                    <img src="public/img/casamentoIluminado.jpeg"
                         alt="Img by Meriç Dağlı https://unsplash.com/@meric"
-                        class="w-full h-auto object-cover rounded-lg">
+                        class="w-auto h-full object-cover rounded-lg">
                     <div
                         class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
-                        <h1 class="text-2xl font-semibold">Nature Image</h1>
-                        <p class="mt-2">This is a beautiful nature image placeholder. You can replace it with your own
-                            image.</p>
+                        <h1 class="text-2xl font-semibold">Programações especiais</h1>
+                        <p class="mt-2">Para você curtir e aproveitar tudo que tem de bom do caribe!!!</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+   
 
 </body>
 
