@@ -81,6 +81,45 @@
                 </div>
             </div>
         </div>
+        <div class="container mx-auto p-4 lg:h-screen flex items-center justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Blog Entry 1 -->
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer">
+                    <img src="public/img/jantar.jpg"
+                        alt=""
+                        class="w-auto h-full object-cover rounded-lg">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Eventos Sociais e Corporativos</h1>
+                        <p class="mt-2"> Participe de eventos sociais toda semana e gratuito!!!</p>
+                    </div>
+                </div>
+
+                <!-- Blog Entry 2 -->
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer">
+                    <img src="public/img/festas.png"
+                        alt="Img by Meriç Dağlı https://unsplash.com/@meric"
+                        class="w-auto h-full object-cover rounded-lg">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Festas inclusas</h1>
+                        <p class="mt-2">Festas todo final de semana e a noite toda! </p>
+                    </div>
+                </div>
+
+                <!-- Blog Entry 3 -->
+                <div class="max-w-sm mx-auto relative shadow-md h-[30em] rounded-lg cursor-pointer cursor-pointer">
+                    <img src="public/img/bolos.jpg"
+                        alt="Img by Meriç Dağlı https://unsplash.com/@meric"
+                        class="w-auto h-full object-cover rounded-lg">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 backdrop-blur text-white p-4 rounded-b-lg">
+                        <h1 class="text-2xl font-semibold">Doces Artesanais</h1>
+                        <p class="mt-2">Doces, tortas e delícias típicas do Caribe!!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
 </body>
