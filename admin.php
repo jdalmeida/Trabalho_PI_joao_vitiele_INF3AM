@@ -1,36 +1,30 @@
 <?php
 require "./include/bd.php";
 
-// Função para excluir todas as reservas de um hóspede
 function excluirReservas($bd, $codHospede)
 {
     $sql = "DELETE FROM reserva WHERE cod_hospede_fk = '$codHospede'";
     mysqli_query($bd, $sql);
 }
 
-// Verificar se um formulário de edição/exclusão foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar se é uma operação de exclusão de reserva
     if (isset($_POST['excluir_reserva'])) {
-        $idReserva = $_POST['id_reserva'];
-        $sql_excluir_reserva = "DELETE FROM reserva WHERE id_reserva = '$idReserva'";
+        $idReserva = $_POST['cod_reserva_pk'];
+        $sql_excluir_reserva = "DELETE FROM reserva WHERE cod_reserva_pk = '$idReserva'";
         mysqli_query($bd, $sql_excluir_reserva);
     }
 
-    // Verificar se é uma operação de exclusão de hóspede
     if (isset($_POST['excluir_hospede'])) {
         $codHospede = $_POST['cod_hospede'];
-        excluirReservas($bd, $codHospede); // Excluir todas as reservas do hóspede
+        excluirReservas($bd, $codHospede);
         $sql_excluir_hospede = "DELETE FROM hospede WHERE cod_hospede = '$codHospede'";
         mysqli_query($bd, $sql_excluir_hospede);
     }
 }
 
-// Consulta para obter todos os hóspedes
 $sql_hospedes = "SELECT * FROM hospede";
 $result_hospedes = mysqli_query($bd, $sql_hospedes);
 
-// Consulta para obter todas as reservas
 $sql_reservas = "SELECT reserva.*, hospede.nome as nome_hospede FROM reserva JOIN hospede ON reserva.cod_hospede_fk = hospede.cod_hospede";
 $result_reservas = mysqli_query($bd, $sql_reservas);
 ?>
@@ -57,6 +51,7 @@ $result_reservas = mysqli_query($bd, $sql_reservas);
                             <form method="post" action="">
                                 <input type="hidden" name="cod_hospede" value="<?= $row_hospede['cod_hospede'] ?>">
                                 <button type="submit" name="excluir_hospede" class="text-red-500 ml-2 hover:underline">Excluir</button>
+                                <a href="editar_hospede.php?cod_hospede=<?= $row_hospede['cod_hospede'] ?>" class="text-blue-500 ml-2 hover:underline">Alterar</a>
                             </form>
                         </li>
                     <?php endwhile; ?>
@@ -82,8 +77,9 @@ $result_reservas = mysqli_query($bd, $sql_reservas);
                                 <td class="py-2 px-4 border"><?= $row_reserva['dt_saida'] ?></td>
                                 <td class="py-2 px-4 border">
                                     <form method="post" action="">
-                                        <input type="hidden" name="id_reserva" value="<?= $row_reserva['id_reserva'] ?>">
+                                        <input type="hidden" name="cod_reserva_pk" value="<?= $row_reserva['cod_reserva_pk'] ?>">
                                         <button type="submit" name="excluir_reserva" class="text-red-500 hover:underline">Excluir</button>
+                                        <a href="editar_reserva.php?cod_reserva_pk=<?= $row_reserva['cod_reserva_pk'] ?>" class="text-blue-500 ml-2 hover:underline">Alterar</a>
                                     </form>
                                 </td>
                             </tr>
